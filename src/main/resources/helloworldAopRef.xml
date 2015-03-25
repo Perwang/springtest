@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+
+<bean id="helloWorldService" class="com.spring.resource.aop.test.HelloWorldService"/>
+
+<bean id="aspect" class="com.spring.resource.aop.ref.test.IntroductiondService"/>
+<aop:config>
+<aop:aspect>
+       <!-- 目的是給目標對象添加方法，添加的方法可以通过反射方式拿到 -->
+       <aop:declare-parents types-matching="com.spring.resource.aop..*.IHelloWorldService+"                  
+ implement-interface="com.spring.resource.aop.ref.test.IIntroductionService"   delegate-ref="aspect"/>
+       
+</aop:aspect>
+	
+	
+</aop:config>
+
+</beans>

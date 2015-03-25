@@ -1,0 +1,155 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.wangcanpei</groupId>
+	<artifactId>springTest</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<spring.version>3.2.13.RELEASE</spring.version>
+		<cglib.version>2.2</cglib.version>
+		<spring.cglib.version>2.2.0</spring.cglib.version>
+		<hsqldb.version>1.8.0.7</hsqldb.version>
+		<junit.version>4.5</junit.version>
+		<easymock.version>3.3.1</easymock.version>
+		<hamcrest.core.version>1.3</hamcrest.core.version>
+		<mockito.core.version>1.9.5</mockito.core.version>
+		<servlet.version>2.4</servlet.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- 封装了框架依赖的最底层部分，包括资源访问、类型转换及一些常用工具类。 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- 用来存放spring 上下文信息，以来支撑spring的整个容器 -->
+		<!-- 以Core和Beans为基础，集成Beans模块功能并添加资源绑定、数据验证、国际化、Java EE支持、容器生命周期、事件传播等；核心接口是ApplicationContext。 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- 是spring支持web的应用 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- 对springmvc的支持 -->
+		<dependency>  
+    		<groupId>org.springframework</groupId>  
+   			<artifactId>spring-webmvc</artifactId>  
+    		<version>${spring.version}</version>  
+		</dependency> 
+		
+	
+		<dependency>  
+  			  <groupId>org.hamcrest</groupId>  
+   			  <artifactId>hamcrest-core</artifactId>  
+              <version>${hamcrest.core.version}</version>  
+              <scope>test</scope>  
+		</dependency>  
+<dependency>  
+    <groupId>org.mockito</groupId>  
+    <artifactId>mockito-core</artifactId>  
+    <version>${mockito.core.version}</version>  
+    <scope>test</scope>  
+</dependency>  
+  
+<dependency>  
+    <groupId>org.springframework</groupId>  
+    <artifactId>spring-test</artifactId>  
+    <version>${spring.version}</version>  
+    <scope>test</scope>  
+</dependency>
+
+		<!-- 是spring对表达式的支持 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-expression</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+
+	<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-tx</artifactId>
+	<version>${spring.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>hsqldb</groupId>
+	<artifactId>hsqldb</artifactId>
+	<version>${hsqldb.version}</version>
+</dependency>
+
+	<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+		<!-- 是动态代理方式 -->
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>${cglib.version}</version>
+		</dependency>
+
+		<!-- 用来处理不是接口的代理 -->
+		<!-- <dependency> -->
+		<!-- <groupId>net.sourceforge.cglib</groupId> -->
+		<!-- <artifactId>com.springsource.net.sf.cglib</artifactId> -->
+		<!-- <version>${spring.cglib.version}</version> -->
+		<!-- </dependency> -->
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.6.8</version>
+		</dependency>
+
+		<dependency>
+			<groupId>aopalliance</groupId>
+			<artifactId>aopalliance</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>aopalliance</groupId>
+			<artifactId>aopalliance</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+			<dependency>
+	<groupId>org.easymock</groupId>
+	<artifactId>easymock</artifactId>
+	<version>${easymock.version}</version>
+</dependency>
+
+		<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>${servlet.version}</version>
+				<scope>provided</scope>
+			</dependency>
+	</dependencies>
+	
+
+
+
+</project>
